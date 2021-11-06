@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MapKit_demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="klw-s2-bF5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="718"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поставьте pin на карте и проложите маршрут" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftx-AX-oQI">
+                                <rect key="frame" x="16" y="770" width="382" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ad-WJ-b6p">
+                                <rect key="frame" x="16" y="792.5" width="120" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="GNN-IJ-sUE"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="s92-ma-8b0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="проложить"/>
+                                <connections>
+                                    <action selector="makeRouteButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="okf-aF-L4z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yzr-Nu-olF">
+                                <rect key="frame" x="278" y="792.5" width="120" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="jbE-9i-zhm"/>
+                                    <constraint firstAttribute="height" constant="44" id="vF2-3f-cfk"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="удалить pin"/>
+                                <connections>
+                                    <action selector="deletePin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ody-cE-Pcv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ftx-AX-oQI" secondAttribute="trailing" constant="16" id="0So-4S-Tp9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yzr-Nu-olF" secondAttribute="trailing" constant="16" id="6Vu-Xf-Atx"/>
+                            <constraint firstItem="0ad-WJ-b6p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="70O-Te-85r"/>
+                            <constraint firstItem="0ad-WJ-b6p" firstAttribute="top" secondItem="ftx-AX-oQI" secondAttribute="bottom" constant="8" id="8MJ-nz-BDx"/>
+                            <constraint firstItem="ftx-AX-oQI" firstAttribute="top" secondItem="klw-s2-bF5" secondAttribute="bottom" constant="8" symbolic="YES" id="Dcy-fR-Whm"/>
+                            <constraint firstItem="klw-s2-bF5" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-100" id="L7q-3K-q5v"/>
+                            <constraint firstItem="ftx-AX-oQI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Ml3-Ee-gyE"/>
+                            <constraint firstItem="klw-s2-bF5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TiU-e6-VWl"/>
+                            <constraint firstItem="klw-s2-bF5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cdN-kM-in1"/>
+                            <constraint firstItem="Yzr-Nu-olF" firstAttribute="top" secondItem="ftx-AX-oQI" secondAttribute="bottom" constant="8" id="gra-la-NsZ"/>
+                            <constraint firstItem="klw-s2-bF5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hss-tR-Xef"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="deletePinButton" destination="Yzr-Nu-olF" id="sZP-8N-pDz"/>
+                        <outlet property="makeRouteButton" destination="0ad-WJ-b6p" id="gci-H8-hFz"/>
+                        <outlet property="mapView" destination="klw-s2-bF5" id="jCk-FR-5hi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="78.348214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
